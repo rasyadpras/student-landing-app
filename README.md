@@ -1,4 +1,4 @@
-# Student Data Application
+# Student App
 
 A simple web-based application built with Java to manage and display student performance data.
 
