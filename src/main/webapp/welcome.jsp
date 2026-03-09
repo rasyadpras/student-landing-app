@@ -22,7 +22,7 @@
         </tr>
         <%
             List<Student> list = (List<Student>) request.getAttribute("studentList");
-            Map<String, String> rates = (Map<String, String>) request.getAttribute("passRates");
+            Map<String, String> rates = (Map<String, String>) request.getAttribute("passedRates");
             String lastDep = "";
         %>
         <% for (int i=0; i < list.size(); i++) {

@@ -10,8 +10,11 @@
 
 <body>
     <div class="box">
-        <form id="loginField" action="login.jsp" method="POST">
-            User ID: <input type="text" name="userID" id="userID"><br><br>
+        <% if ("1".equals(request.getParameter("error"))) { %>
+        <p style="color: red; font-size: 14px;">Wrong User ID or Password</p>
+        <% } %>
+        <form id="loginField" action="login" method="POST">
+            User ID: <input type="text" name="userId" id="userId"><br><br>
 
             Password: <input type="password" name="password" id="password"><br><br>
 
@@ -21,8 +24,8 @@
 
     <script>
         $(document).ready(function () {
-            $("loginField").submit(function (e) {
-                if ($("userID").val() === "" || $("password").val() === "") {
+            $("#loginField").submit(function (e) {
+                if ($("#userId").val() === "" || $("#password").val() === "") {
                     alert("User ID and Password must not be empty!");
                     e.preventDefault();
                 }
