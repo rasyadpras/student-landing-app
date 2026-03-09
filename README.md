@@ -1,4 +1,4 @@
-# Student App
+# Student Landing App
 
 A simple web-based application built with Java to manage and display student performance data.
 
